@@ -11,7 +11,6 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 @Database(entities = [UserEntity::class], version = 2)
 abstract class RoomAppDb: RoomDatabase() {
 
-
     abstract fun userDao(): UserDao?
 
     companion object {

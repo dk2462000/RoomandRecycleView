@@ -7,10 +7,9 @@ import com.example.roomandrecycleview.db.RoomAppDb
 import com.example.roomandrecycleview.db.UserEntity
 
 class MainActivityViewModel(app: Application): AndroidViewModel(app) {
-    lateinit var allUsers : MutableLiveData<List<UserEntity>>
+    var allUsers : MutableLiveData<List<UserEntity>> = MutableLiveData()
 
     init{
-        allUsers = MutableLiveData()
         getAllUsers()
     }
 

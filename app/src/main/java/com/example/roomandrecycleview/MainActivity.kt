@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.RowClickListener {
             val name  = nameInput.text.toString()
             val email  = emailInput.text.toString()
             val phone = phoneInput.text.toString()
-            if(saveButton.text.equals("Save")) {
+            if( saveButton.text.equals("Save") ) {
                 val user = UserEntity(0, name, email, phone)
                 viewModel.insertUserInfo(user)
             } else {
@@ -50,10 +50,9 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.RowClickListener {
             }
             nameInput.setText("")
             emailInput.setText("")
+            phoneInput.setText("")
         }
     }
-
-
 
     override fun onDeleteUserClickListener(user: UserEntity) {
         viewModel.deleteUserInfo(user)
